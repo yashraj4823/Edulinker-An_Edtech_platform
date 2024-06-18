@@ -1,4 +1,4 @@
-const BASE_URL = "study-notion-backend-rosy.vercel.app"
+const BASE_URL = "http://localhost:4000/api/v1"
 
 // AUTH ENDPOINTS
 export const endpoints = {
