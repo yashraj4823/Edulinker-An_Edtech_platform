@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 const Profile = require("../models/Profile");
 const jwt = require("jsonwebtoken");
 const { passwordUpdated } = require("../mail/passwordUpdate")
-require("dotenv").config();
+require('dotenv').config();
 const mailSender = require("../utils/mailSender");
 
 //signup 
