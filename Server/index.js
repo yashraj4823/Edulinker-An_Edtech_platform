@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin:"https://study-notion-an-edtech-platform-five.vercel.app",
+        origin:"study-notion-an-edtech-platform-ten.vercel.app",
         credentials:true,
     })
 );
