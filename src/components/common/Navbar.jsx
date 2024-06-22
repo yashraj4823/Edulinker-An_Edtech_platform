@@ -122,7 +122,7 @@ const Navbar = () => {
             </nav>
 
             {/* Login/ Signup/ Dashboard */}
-            <div className='hidden md:flex gap-4 items-center'>
+            <div className='flex gap-4 items-center'>
                 {
                     user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
                         <Link to="/dashboard/cart" className='relative'>
@@ -141,7 +141,7 @@ const Navbar = () => {
                 {
                     token === null && (
                         <Link to="/login">
-                            <button className="border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-[8px]">
+                            <button className="hidden md:block border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-[8px]">
                                 Log In
                             </button>
                         </Link>
@@ -151,7 +151,7 @@ const Navbar = () => {
                 {
                     token === null && (
                         <Link to="/signup">
-                            <button className="border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-[8px]">
+                            <button className="hidden md:block border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-[8px]">
                                 Sign Up
                             </button>
                         </Link>
@@ -163,9 +163,12 @@ const Navbar = () => {
                 }
             
             </div>
-            <button className="mr-4 md:hidden">
-          <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
-        </button>
+
+            <button className="mr-4 md:hidden"
+            
+            >
+              <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
+            </button>
         </div>
     </div>
   )

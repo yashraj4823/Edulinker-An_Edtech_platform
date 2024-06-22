@@ -61,7 +61,7 @@ function Home() {
             {/*Code Section 1 */}
             <div>
                 <CodeBlocks
-                    position={"lg:flex-row"}
+                    position={"lg:flex-row flex-col"}
                     heading={
                         <div className='text-4xl font-semibold'>
                             Unlock your
@@ -82,7 +82,7 @@ function Home() {
                     ctabtn2={
                         {
                             btntext:"Learn more",
-                            linkto:"/login",
+                            linkto:"/signup",
                             active:false
                         }
                     }
@@ -96,7 +96,7 @@ function Home() {
             {/*Code Section 2 */}
             <div>
                 <CodeBlocks
-                    position={"lg:flex-row-reverse"}
+                    position={"lg:flex-row-reverse flex-col-reverse"}
                     heading={
                         <div className='w-[100%] text-4xl font-semibold lg:w-[50%]"'>
                             Start
@@ -134,16 +134,16 @@ function Home() {
         {/* Section 2 */}
         <div className='bg-pure-greys-5 text-richblack-700'>
             <div className='homepage_bg h-[320px]'>
-                    <div className='w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5 mx-auto'>
-                        <div className='h-[150px]'></div>
-                        <div className='flex flex-row gap-7 text-white'>
+                    <div className='w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-8 mx-auto'>
+                        <div className='lg:h-[150px]'></div>
+                        <div className='flex flex-row gap-7 text-white lg:mt-8'>
                             <CTAButton active={true} linkto={"/signup"}>
-                                <div className='flex items-center gap-3'>
+                                <div className='flex items-center gap-2'>
                                     Explore Full Catalog
                                     <FaArrowRight/>
                                 </div>
                             </CTAButton>
-                            <CTAButton active={false} linkto={"/signup"}>
+                            <CTAButton active={false} linkto={"/login"}>
                                 <div>
                                     Learn More
                                 </div>
@@ -152,15 +152,15 @@ function Home() {
                     </div>
             </div>
 
-            <div className='mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between'>
-                    <div className='flex flex-row gap-5 mb-10 mt-[95px]'>
+            <div className='mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-8'>
+                    <div className='flex lg:flex-row flex-col justify-between gap-7 mb-10 mt-[95px] lg:mt-20 lg:gap-0'>
 
-                        <div className='text-4xl font-semibold w-[45%]'>
+                        <div className='text-4xl font-semibold lg:w-[45%]'>
                             Get the Skills you need for a
                             <HighlightText text={"Job that is in demand."}/>
                         </div>
 
-                        <div className='flex flex-col gap-10 w-[40%] items-start'>
+                        <div className='flex flex-col gap-10 lg:w-[40%] items-start'>
                             <div className='text-[16px]'>
                                 The modern StudyNotion is the dictates its own terms. Today, to be a competitive specialist requires more than professional skills.
                             </div>
@@ -184,9 +184,9 @@ function Home() {
         </div>
         
         {/* Section 3 */}
-        <div className='w-11/12 mx-auto max-w-maxContent flex flex-col items-center justify-between gap-8 first-letter bg-richblack-900 text-white'>
+        <div className='relative w-11/12 mx-auto my-16 max-w-maxContent flex flex-col items-center justify-between gap-8 first-letter bg-richblack-900 text-white'>
             <InstructorSection/>
-            <h2 className='text-center text-4xl font-semibold mt-10'>Reviews from other learners</h2>
+            <h2 className='text-center text-4xl font-semibold mt-8'>Reviews from other learners</h2>
             {/* Review Slider Here */}
             <ReviewSlider/>
         </div>
