@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const BASE_URL = `http://localhost:4000/api/v1`
+=======
+const BASE_URL = "https://study-notion-an-edtech-platform.onrender.com/api/v1"
+>>>>>>> a126f9d901f1f562c23aba3e0a4a8f111e80c55c
 
 // AUTH ENDPOINTS
 export const endpoints = {
