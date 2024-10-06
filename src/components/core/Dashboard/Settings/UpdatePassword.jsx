@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { useNavigate } from 'react-router-dom'
-import IconBtn from '../../../common/IconBtn'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { changePassword } from '../../../../services/operations/SettingsAPI'
+import IconBtn from '../../../common/IconBtn'
 
 const UpdatePassword = () => {
 
@@ -112,7 +112,7 @@ const UpdatePassword = () => {
 
           </div>  
 
-          <div className='flex justify-end gap-2'>
+          <div className='flex justify-between md:justify-end gap-2'>
             <button
             onClick={() => {
               navigate("/dashboard/my-profile")

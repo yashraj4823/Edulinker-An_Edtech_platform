@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Outlet, useParams } from 'react-router-dom'
-import { setCompletedLectures, setCourseSectionData, setEntireCourseData, setTotalNoOfLectures } from '../slices/viewCourseSlice'
-import VideoDetailsSidebar from '../components/core/ViewCourse/VideoDetailsSidebar'
 import CourseReviewModal from '../components/core/ViewCourse/CourseReviewModal'
+import VideoDetailsSidebar from '../components/core/ViewCourse/VideoDetailsSidebar'
 import { getFullDetailsOfCourse } from '../services/operations/courseDetailsAPI'
+import { setCompletedLectures, setCourseSectionData, setEntireCourseData, setTotalNoOfLectures } from '../slices/viewCourseSlice'
 
 const ViewCourse = () => {
 
@@ -36,9 +36,9 @@ const ViewCourse = () => {
 
   return (
     <>
-        <div className='relative flex min-h-[calc(100vh-3.5rem)]'>
+        <div className=' md:relative flex flex-col-reverse md:flex-row h-auto md:min-h-[calc(100vh-3.5rem)]'>
             <VideoDetailsSidebar setReviewModal={setReviewModal}/>
-            <div className='h-[calc(100vh-3.5rem)] flex-1 overflow-auto'>
+            <div className='h-auto md:h-[calc(100vh-3.5rem)] flex-1 overflow-auto'>
                 <div className='mx-6'>
                     <Outlet/>
                 </div>
@@ -48,6 +48,7 @@ const ViewCourse = () => {
             reviewModal && <CourseReviewModal setReviewModal={setReviewModal}/>
         }
     </>
+
   )
 }
 

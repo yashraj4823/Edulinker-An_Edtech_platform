@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { BigPlayButton, Player } from 'video-react'
+import "video-react/dist/video-react.css"
 import { markLectureAsComplete } from '../../../services/operations/courseDetailsAPI'
 import { updateCompletedLectures } from '../../../slices/viewCourseSlice'
-import { Player, BigPlayButton } from 'video-react'
-import "video-react/dist/video-react.css"
 import IconBtn from '../../common/IconBtn'
 
 const VideoDetails = () => {

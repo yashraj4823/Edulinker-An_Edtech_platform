@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import {sidebarLinks} from "../../../data/dashboard-links"
-import { logout } from '../../../services/operations/authAPI'
-import { useDispatch, useSelector } from 'react-redux'
-import SidebarLink from './SidebarLink'
-import { useNavigate } from 'react-router-dom'
 import { VscSignOut } from 'react-icons/vsc'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { sidebarLinks } from "../../../data/dashboard-links"
+import { logout } from '../../../services/operations/authAPI'
 import ConfirmationModal from '../../common/ConfirmationModal'
+import SidebarLink from './SidebarLink'
 
 const Sidebar = () => {
 
@@ -28,7 +28,7 @@ const Sidebar = () => {
 
   return (
     <>
-        <div className='flex flex-col min-w-[220px] h-[calc(100vh-3.5rem)] border-r-[1px] border-r-richblack-700 bg-richblack-800 py-10'>
+        <div className='md:flex hidden flex-col min-w-[220px] h-[calc(100vh-3.5rem)] border-r-[1px] border-r-richblack-700 bg-richblack-800 py-10'>
         <div className='flex flex-col'>
             {
                 sidebarLinks.map((link) => {

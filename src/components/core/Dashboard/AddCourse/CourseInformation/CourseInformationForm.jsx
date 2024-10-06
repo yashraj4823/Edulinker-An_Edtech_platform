@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form'
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from "react-hot-toast";
+import { HiOutlineCurrencyRupee } from "react-icons/hi";
+import { MdNavigateNext } from "react-icons/md";
 import { useDispatch, useSelector } from 'react-redux';
-import {addCourseDetails, editCourseDetails, fetchCourseCategories} from "../../../../../services/operations/courseDetailsAPI"
-import { HiOutlineCurrencyRupee } from "react-icons/hi"
+import { addCourseDetails, editCourseDetails, fetchCourseCategories } from "../../../../../services/operations/courseDetailsAPI";
+import { setCourse, setStep } from '../../../../../slices/courseSlice';
+import { COURSE_STATUS } from "../../../../../utils/constants";
+import IconBtn from '../../../../common/IconBtn';
+import Upload from '../Upload';
 import ChipInput from './ChipInput';
 import RequirementField from './RequirementField';
-import Upload from '../Upload';
-import { setCourse, setStep } from '../../../../../slices/courseSlice';
-import IconBtn from '../../../../common/IconBtn';
-import { toast } from "react-hot-toast"
-import { COURSE_STATUS } from "../../../../../utils/constants"
-import { MdNavigateNext } from "react-icons/md"
 
 const CourseInformationForm = () => {
     const {
@@ -149,7 +149,7 @@ const CourseInformationForm = () => {
   return (
     <form
     onSubmit={handleSubmit(onSubmit)}
-    className='rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6 space-y-8'
+    className='rounded-md w-full border-[1px] border-richblack-700 bg-richblack-800 p-6 space-y-8'
     >
         <div className='flex flex-col space-y-2'>
             <label htmlFor='courseTitle' className='text-sm text-richblack-5'>Course Title<sup className='text-pink-200'>*</sup></label>

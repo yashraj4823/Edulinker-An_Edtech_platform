@@ -1,8 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import IconBtn from '../../../common/IconBtn'
 import { FiUpload } from 'react-icons/fi'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateDisplayPicture } from '../../../../services/operations/SettingsAPI'
+import IconBtn from '../../../common/IconBtn'
 
 const ChangeProfilePicture = () => {
 
@@ -64,7 +65,7 @@ const ChangeProfilePicture = () => {
           <img
             src={user?.image}
             alt={`profile-${user?.firstName}`}
-            className='aspect-square w-[78px] rounded-full object-cover'
+            className='aspect-square w-[60px] md:w-[78px] rounded-full object-cover'
           />
           <div className='space-y-2'>
             <p>Change Profile Picture</p>
@@ -86,6 +87,7 @@ const ChangeProfilePicture = () => {
               <IconBtn
                 text={loading ? "Uploading..." : "Upload"}
                 onclick={handleFileUpload}
+                customClasses={"md:text-"}
               >
                 {
                   !loading && 

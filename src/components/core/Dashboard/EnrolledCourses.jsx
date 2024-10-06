@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
-import { getUserEnrolledCourses } from '../../../services/operations/ProfileAPI';
 import ProgressBar from '@ramonak/react-progress-bar';
-import { useNavigate } from "react-router-dom"
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
+import { getUserEnrolledCourses } from '../../../services/operations/ProfileAPI';
+import DashboardDropdown from './DashboardDropdown';
 
 const EnrolledCourses = () => {
 
@@ -29,8 +30,11 @@ const EnrolledCourses = () => {
 
   return (
     <div>
-        <div className="text-3xl text-richblack-50">
-            Enrolled Courses
+        <div className='flex items-baseline gap-2'>
+            <h1 className='mb-14 text-2xl md:text-3xl font-medium text-richblack-5'>
+                Enrolled Courses
+            </h1>
+            <DashboardDropdown/>
         </div>
         {
             !enrolledCourses ? (

@@ -1,8 +1,8 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { FaCheck } from "react-icons/fa"
-import CourseInformationForm from './CourseInformation/CourseInformationForm'
+import { useSelector } from 'react-redux'
 import CourseBuilderForm from './CourseBuilder/CourseBuilderForm'
+import CourseInformationForm from './CourseInformation/CourseInformationForm'
 import PublishCourse from './PublishCourse'
 
 const RenderSteps = () => {
@@ -30,7 +30,7 @@ const RenderSteps = () => {
                 steps.map((item) => (
                     <>
                         <div className='flex flex-col items-center' key={item.id}>
-                            <button className={`grid cursor-default aspect-square w-[34px] place-items-center rounded-full border-[1px] ${step === item.id ? "bg-yellow-900 border-yellow-50 text-yellow-50" : "border-richblack-700 bg-richblack-800 text-richblack-300"} ${step > item.id && "bg-yellow-50 text-yellow-50"}`}>
+                            <button className={`grid cursor-default aspect-square w-[24px] md:w-[34px] place-items-center rounded-full border-[1px] ${step === item.id ? "bg-yellow-900 border-yellow-50 text-yellow-50" : "border-richblack-700 bg-richblack-800 text-richblack-300"} ${step > item.id && "bg-yellow-50 text-yellow-50"}`}>
                                 {
                                     step > item.id ? (<FaCheck className="font-bold text-richblack-900"/>) : (item.id)
                                 }
@@ -52,10 +52,10 @@ const RenderSteps = () => {
             {
                 steps.map((item) => (
                     <>
-                        <div className='flex min-w-[130px] flex-col items-center gap-y-2'
+                        <div className='flex min-w-[100px] md:min-w-[130px] flex-col items-center gap-y-2'
                         key={item.id}
                         >
-                            <p className={`text-sm ${step >= item.id ? "text-richblack-5" : "text-richblack-500"}`}>{item.title}</p>
+                            <p className={`text-[10px] md:text-sm ${step >= item.id ? "text-richblack-5" : "text-richblack-500"}`}>{item.title}</p>
                         </div>
                     </>
                 ))

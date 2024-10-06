@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { getInstructorData } from '../../../../services/operations/ProfileAPI'
 import { fetchInstructorCourses } from '../../../../services/operations/courseDetailsAPI'
+import DashboardDropdown from '../DashboardDropdown'
 import InstructorChart from './InstructorChart'
-import { Link } from 'react-router-dom'
 
 const Instructor = () => {
 
@@ -44,10 +45,13 @@ const Instructor = () => {
 
   return (
     <div>
-        <div className='space-y-2'>
-            <h1 className='text-2xl font-bold text-richblack-5'>
-                Hi {user?.firstName} 👋
-            </h1>
+        <div className=''>
+            <div className='flex items-baseline gap-4'>
+                <h1 className='mb-14 text-[26px] font-bold text-richblack-5'>
+                    Hi {user?.firstName} 👋
+                </h1>
+                <DashboardDropdown/>
+            </div>
             <p className='font-medium text-richblack-200'>
                 Let's start something new
             </p>
@@ -57,7 +61,7 @@ const Instructor = () => {
                 <div className='spinner'></div>
             ) : courses.length > 0 ? (
                 <div>
-                    <div className='my-4 flex h-[450px] space-x-4'>
+                    <div className='my-4 flex flex-col md:flex-row h-auto space-y-4 md:space-x-4'>
                         {/* Render chart */}
                         {
                             totalAmount > 0 || totalStudents > 0 ? (
@@ -88,7 +92,7 @@ const Instructor = () => {
                         </div>
                     </div>
 
-                    <div className='rounded-md bg-richblack-800 p-6'>
+                    <div className=' md:block rounded-md bg-richblack-800 p-6'>
                         <div className='flex items-center justify-between'>
                             <p className="text-lg font-bold text-richblack-5">Your Courses</p>
                             <Link to="/dashboard/my-courses">
@@ -102,13 +106,13 @@ const Instructor = () => {
                                         <img
                                             src={course.thumbnail}
                                             alt={course.courseName}
-                                            className='h-[201px] w-full rounded-md object-cover'
+                                            className='h-[60px] md:h-[201px] w-full rounded-md object-cover'
                                         />
                                         <div className='mt-3 w-full'>
                                             <p className='text-sm font-medium text-richblack-50'>{course.courseName}</p>
-                                            <div className='mt-1 flex items-center space-x-2'>
+                                            <div className='mt-1 flex flex-col md:flex-row items-start md:space-x-2'>
                                                 <p className='text-xs font-medium text-richblack-300'>{course.studentEnrolled.length} Students</p>
-                                                <p className='text-xs font-medium text-richblack-300'> | </p>
+                                                <p className='hidden md:block text-xs font-medium text-richblack-300'> | </p>
                                                 <p className='text-xs font-medium text-richblack-300'>Rs. {course.price}</p>
                                             </div>
                                         </div>

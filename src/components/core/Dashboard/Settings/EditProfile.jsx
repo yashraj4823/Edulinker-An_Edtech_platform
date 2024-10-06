@@ -1,9 +1,9 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import IconBtn from '../../../common/IconBtn'
-import { updateProfile } from '../../../../services/operations/SettingsAPI'
 import { useNavigate } from 'react-router-dom'
+import { updateProfile } from '../../../../services/operations/SettingsAPI'
+import IconBtn from '../../../common/IconBtn'
 
 
 const genders = ["Male", "Female", "Non-Binary", "Prefer not to say", "Other"]
@@ -208,7 +208,7 @@ const EditProfile = () => {
             </div>
           </div>
 
-          <div className='flex justify-end gap-2'>
+          <div className='flex justify-between md:justify-end gap-2'>
             <button
             onClick={() => {
               navigate("/dashboard/my-profile")

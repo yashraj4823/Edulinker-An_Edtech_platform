@@ -1,32 +1,32 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import {Route, Routes} from "react-router-dom";
-import Home from "./pages/Home";
 import Navbar from "./components/common/Navbar";
-import OpenRoute from "./components/core/Auth/OpenRoute"
-import PrivateRoute from "./components/core/Auth/PrivateRoute" 
-import Signup from "./pages/Signup"
-import Login from "./pages/Login";
+import OpenRoute from "./components/core/Auth/OpenRoute";
+import PrivateRoute from "./components/core/Auth/PrivateRoute";
+import AddCourse from "./components/core/Dashboard/AddCourse";
+import Cart from "./components/core/Dashboard/Cart";
+import EditCourse from "./components/core/Dashboard/EditCourse";
+import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
+import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
+import MyCourses from "./components/core/Dashboard/MyCourses";
+import MyProfile from "./components/core/Dashboard/MyProfile";
+import Settings from "./components/core/Dashboard/Settings";
+import VideoDetails from "./components/core/ViewCourse/VideoDetails";
+import About from "./pages/About";
+import Catalog from "./pages/Catalog";
+import Contact from "./pages/Contact";
+import CourseDetails from "./pages/CourseDetails";
+import Dashboard from "./pages/Dashboard";
 import ForgotPassword from "./pages/ForgotPassword";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Dashboard from "./pages/Dashboard";
-import MyProfile from "./components/core/Dashboard/MyProfile"
-import Settings from "./components/core/Dashboard/Settings";
-import EnrolledCourses from "./components/core/Dashboard/EnrolledCourses";
-import Cart from "./components/core/Dashboard/Cart";
-import { ACCOUNT_TYPE } from "./utils/constants";
-import { useSelector } from "react-redux";
-import AddCourse from "./components/core/Dashboard/AddCourse";
-import MyCourses from "./components/core/Dashboard/MyCourses";
-import EditCourse from "./components/core/Dashboard/EditCourse";
-import Catalog from "./pages/Catalog";
-import CourseDetails from "./pages/CourseDetails";
 import ViewCourse from "./pages/ViewCourse";
-import VideoDetails from "./components/core/ViewCourse/VideoDetails";
-import Instructor from "./components/core/Dashboard/InstructorDashboard/Instructor";
+import { ACCOUNT_TYPE } from "./utils/constants";
 
 function App() {
 

@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react'
-import { Link, matchPath } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { AiOutlineMenu } from "react-icons/ai"
+import { IoIosArrowDropdownCircle } from "react-icons/io"
+import { IoCartOutline } from "react-icons/io5"
+import { useSelector } from 'react-redux'
+import { Link, matchPath, useLocation } from 'react-router-dom'
 import logo from "../../assets/Logo/Logo-Full-Light.png"
 import { NavbarLinks } from '../../data/navbar-links'
-import { useLocation } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { IoCartOutline } from "react-icons/io5";
-import ProfileDropDown from '../core/Auth/ProfileDropDown'
-import { useState } from 'react'
 import { apiConnector } from '../../services/apiconnector'
 import { categories } from '../../services/apis'
-import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { ACCOUNT_TYPE } from '../../utils/constants'
-import { AiOutlineMenu } from "react-icons/ai"
+import ProfileDropDown from '../core/Auth/ProfileDropDown'
+import SidebarDialog from './SidebarDialog'
 
 
 const Navbar = () => {
@@ -24,6 +23,8 @@ const Navbar = () => {
 
     const [subLinks, setSubLinks] = useState([]);
     const [loading, setLoading] = useState(false)
+
+    const [open, setOpen] = useState(false);
 
     const fetchSublinks = async() => {
         setLoading(true)
@@ -55,7 +56,7 @@ const Navbar = () => {
 
         <div className='flex w-11/12 max-w-maxContent items-center justify-between'>
             <Link to="/">
-                <img src={logo} alt='logo' width={160} height={42} loading='lazy'/>
+                <img src={logo} alt='logo' width={160} height={42} loading='lazy' className='ml-2 w-2/3 md:w-full'/>
             </Link>
 
             {/* Nav Links */}
@@ -141,8 +142,8 @@ const Navbar = () => {
                 {
                     token === null && (
                         <Link to="/login">
-                            <button className="hidden md:block border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-[8px]">
-                                Log In
+                            <button className=" text-sm md:text-lg border border-richblack-700 bg-richblack-800 px-[18px] md:px-[12px] py-[8px] text-richblack-100 rounded-[8px]">
+                                LogIn
                             </button>
                         </Link>
                     )
@@ -151,8 +152,8 @@ const Navbar = () => {
                 {
                     token === null && (
                         <Link to="/signup">
-                            <button className="hidden md:block border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-[8px]">
-                                Sign Up
+                            <button className="text-sm md:text-lg border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 rounded-[8px]">
+                                SignUp
                             </button>
                         </Link>
                     )
@@ -163,13 +164,21 @@ const Navbar = () => {
                 }
             
             </div>
+        </div>
 
-            <button className="mr-4 md:hidden"
-            
+        <div className=''>     
+            <button 
+            onClick={() => setOpen(true)}
+            className="mr-4 ml-4 md:hidden"
             >
               <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
             </button>
+            <SidebarDialog
+              open={open}
+              setOpen={setOpen} 
+            />
         </div>
+
     </div>
   )
 }

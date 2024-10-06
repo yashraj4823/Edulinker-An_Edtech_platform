@@ -27,7 +27,7 @@ app.use(
 <<<<<<< HEAD
         origin:"http://localhost:3000",
 =======
-        origin:"https://study-notion-an-edtech-platform-five.vercel.app",
+        //origin:"https://study-notion-an-edtech-platform-five.vercel.app",
 >>>>>>> a126f9d901f1f562c23aba3e0a4a8f111e80c55c
         credentials:true,
     })

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import { Chart, registerables } from "chart.js"
+import React, { useState } from 'react'
 import { Pie } from "react-chartjs-2"
 
 Chart.register(...registerables)
@@ -62,7 +62,7 @@ const InstructorChart = ({courses}) => {
                 Income
             </button>
         </div>
-        <div className='relative mx-auto aspect-square h-full w-full'>
+        <div className='relative mx-auto aspect-square h-auto max-h-[300px] w-full'>
             <Pie
                 data={currChart === "students" ? chartDataForStudents : charDataForIncome}
                 options={options}
