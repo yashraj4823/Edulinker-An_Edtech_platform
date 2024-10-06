@@ -137,7 +137,7 @@ export default function CoursesTable({courses, setCourses}) {
 
                             <div className="flex flex-col md:hidden gap-x-4 border-b border-richblack-800 px-6 py-8">
 
-                                <div className="flex flex-col gap-2 items-center gap-x-4">
+                                <div className="flex flex-col gap-2 items-start gap-x-4">
                                     <img
                                     src={course?.thumbnail}
                                     alt="Thumbnail"
