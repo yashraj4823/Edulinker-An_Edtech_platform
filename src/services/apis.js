@@ -1,10 +1,7 @@
 const BASE_URL = "https://study-notion-an-edtech-platform.onrender.com/api/v1"
-<<<<<<< HEAD
->>>>>>> a126f9d901f1f562c23aba3e0a4a8f111e80c55c
-//const BASE_URL = `http://localhost:4000/api/v1`
-=======
 
->>>>>>> 25a89e475553113c0ce2e067ec87c0d79bf68777
+//const BASE_URL = `http://localhost:4000/api/v1`
+
 // AUTH ENDPOINTS
 export const endpoints = {
     SENDOTP_API: BASE_URL + "/auth/sendotp",
