@@ -1,7 +1,8 @@
-import React from 'react'
-import Logo from "../../assets/Logo/Logo-Full-Light.png"
-import { Link } from "react-router-dom"
-import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa"
+import React from 'react';
+import { FaFacebook, FaGithub, FaGoogle, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo/Logo-Full-Light.png";
 import { FooterLink2 } from "../../data/footer-links";
 
 const Resources = [
@@ -188,6 +189,21 @@ const Footer = () => {
           </div>
 
           <div className="text-center">Made with ❤️ StudyNotion © 2023 </div>
+          <div className='flex gap-2'>
+            <p>Developer :</p>
+            <p>Roushan Shah</p>
+          </div>
+          <div className='flex gap-4'>
+            <a href='https://github.com/Roushanshah'>
+                <FaGithub size={20}/>
+            </a>
+            <a href='https://www.linkedin.com/in/roushan-kumar-946a60243/'>
+                <FaLinkedin size={20}/>
+            </a>
+            <a href='https://x.com/Roushanshah8'>
+                <FaXTwitter size={20}/>
+            </a>
+          </div>
         </div>
       </div>
 
