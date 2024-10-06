@@ -25,10 +25,14 @@ app.use(cookieParser());
 app.use(
     cors({
 <<<<<<< HEAD
+<<<<<<< HEAD
         origin:"http://localhost:3000",
 =======
         //origin:"https://study-notion-an-edtech-platform-five.vercel.app",
 >>>>>>> a126f9d901f1f562c23aba3e0a4a8f111e80c55c
+=======
+        origin:"https://study-notion-an-edtech-platform-ten.vercel.app",
+>>>>>>> 25a89e475553113c0ce2e067ec87c0d79bf68777
         credentials:true,
     })
 );
