@@ -124,7 +124,7 @@ EduLinker uses a monolithic architecture, with the backend built using Node.js a
 Express.js, and MongoDB as the primary database.
 
 Features and Functionalities of the Back-end:
-The back end of StudyNotion provides a range of features and functionalities, including:
+The back end of EduLinker provides a range of features and functionalities, including:
 
 1. User authentication and authorization: Students and instructors can sign up and log in
    to the platform using their email addresses and password. The platform also supports
@@ -141,7 +141,7 @@ The back end of StudyNotion provides a range of features and functionalities, in
    format, which allows for easier display and rendering on the front end.
 
 Frameworks, Libraries, and Tools used:
-The back end of StudyNotion uses a range of frameworks, libraries, and tools to ensure its
+The back end of EduLinker uses a range of frameworks, libraries, and tools to ensure its
 functionality and performance, including:
 
 1. Node.js: Node.js is used as the primary framework for the back end.
@@ -168,7 +168,7 @@ manage data, including:
 3. Course schema: Includes fields such as course name, description, instructor details,
    and media content.
 
-Overall, the back-end of StudyNotion is designed to provide a robust and scalable solution
+Overall, the back-end of EduLinker is designed to provide a robust and scalable solution
 for an ed-tech platform, with a focus on security, reliability, and ease of use. By using the
 right frameworks, libraries, and tools, we can ensure that the platform functions smoothly
 and provides an optimal user experience for all its users.
@@ -215,5 +215,5 @@ RESTful principles, the API will be scalable, maintainable, and reliable. The sa
 requests and responses provided above illustrate how each endpoint will function and
 what kind of data it will accept or return. With this API design, StudyNotion will be able to
 provide a smooth user experience while ensuring security and stability.
-# Study_Notion-An_Edtech_Platform
-# Study_Notion-An_Edtech_Platform
+
+# EduLinker-An_Edtech_Platform
