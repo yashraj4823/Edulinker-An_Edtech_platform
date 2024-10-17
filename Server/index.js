@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin:"https://study-notion-an-edtech-platform-ten.vercel.app",
+        origin:"https://edu-linker-an-edtech-platform-ten.vercel.app",
 
         //origin:"http://localhost:3000",
         credentials:true,
