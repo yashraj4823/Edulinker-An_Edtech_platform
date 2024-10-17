@@ -1,13 +1,13 @@
-# StudyNotion Online Education Platform (MERN App)
+# EduLinker Online Education Platform (MERN App)
 
-![Main Page](images/mainpage.png)
+![Main Page](https://github.com/user-attachments/assets/3d655556-eaed-4695-a0d4-cb6c12eb3006)
 
 ## Project Description
 
-StudyNotion is a fully functional ed-tech platform that enables users to create, consume,
+EduLinker is a fully functional ed-tech platform that enables users to create, consume,
 and rate educational content. The platform is built using the MERN stack, which includes
 ReactJS, NodeJS, MongoDB, and ExpressJS.
-StudyNotion aims to provide:
+EduLinker aims to provide:
 
 - A seamless and interactive learning experience for students, making education
   more accessible and engaging.
@@ -32,7 +32,7 @@ StudyNotion aims to provide:
    explanation of how these enhancements would improve the platform, estimated
    timeline and priority for implementing these enhancements.
 
-In summary, StudyNotion is a versatile and intuitive ed-tech platform that is designed to
+In summary, EduLinker is a versatile and intuitive ed-tech platform that is designed to
 provide an immersive learning experience to students and a platform for instructors to
 showcase their expertise. In the following sections, we will delve into the technical details
 of the platform, which will provide a comprehensive understanding of the platform's
@@ -40,7 +40,7 @@ features and functionalities.
 
 ## System Architecture
 
-The StudyNotion ed-tech platform consists of three main components: the front end, the
+The EduLinker ed-tech platform consists of three main components: the front end, the
 back end, and the database. The platform follows a client-server architecture, with the
 front end serving as the client and the back end and database serving as the server.
 
@@ -73,7 +73,7 @@ platform:
 
 ## Front End
 
-The front end of StudyNotion has all the necessary pages that an ed-tech platform should
+The front end of EduLinker has all the necessary pages that an ed-tech platform should
 have. Some of these pages are:
 
 ### For Students:
@@ -120,11 +120,11 @@ library for React.
 ## Back End
 
 Description of the Back-end Architecture:
-StudyNotion uses a monolithic architecture, with the backend built using Node.js and
+EduLinker uses a monolithic architecture, with the backend built using Node.js and
 Express.js, and MongoDB as the primary database.
 
 Features and Functionalities of the Back-end:
-The back end of StudyNotion provides a range of features and functionalities, including:
+The back end of EduLinker provides a range of features and functionalities, including:
 
 1. User authentication and authorization: Students and instructors can sign up and log in
    to the platform using their email addresses and password. The platform also supports
@@ -141,7 +141,7 @@ The back end of StudyNotion provides a range of features and functionalities, in
    format, which allows for easier display and rendering on the front end.
 
 Frameworks, Libraries, and Tools used:
-The back end of StudyNotion uses a range of frameworks, libraries, and tools to ensure its
+The back end of EduLinker uses a range of frameworks, libraries, and tools to ensure its
 functionality and performance, including:
 
 1. Node.js: Node.js is used as the primary framework for the back end.
@@ -158,7 +158,7 @@ functionality and performance, including:
 
 ### Data Models and Database Schema:
 
-The back end of StudyNotion uses a range of data models and database schemas to
+The back end of EduLinker uses a range of data models and database schemas to
 manage data, including:
 
 1. Student schema: Includes fields such as name, email, password, and course details
@@ -168,7 +168,7 @@ manage data, including:
 3. Course schema: Includes fields such as course name, description, instructor details,
    and media content.
 
-Overall, the back-end of StudyNotion is designed to provide a robust and scalable solution
+Overall, the back-end of EduLinker is designed to provide a robust and scalable solution
 for an ed-tech platform, with a focus on security, reliability, and ease of use. By using the
 right frameworks, libraries, and tools, we can ensure that the platform functions smoothly
 and provides an optimal user experience for all its users.
@@ -177,7 +177,7 @@ and provides an optimal user experience for all its users.
 
 ## API Design
 
-The StudyNotion platform's API is designed following the REST architectural style. The
+The EduLinker platform's API is designed following the REST architectural style. The
 API is implemented using Node.js and Express.js. It uses JSON for data exchange and
 follows standard HTTP request methods such as GET, POST, PUT, and DELETE.
 Sample list of API endpoints and their functionalities:
@@ -208,12 +208,12 @@ Sample list of API endpoints and their functionalities:
 15. DELETE /api/courses/:id: Delete a course by ID
     - Response: A success message indicating that the course has been deleted.
 
-In conclusion, the REST API design for the StudyNotion ed-tech platform is a crucial part
+In conclusion, the REST API design for the EduLinker ed-tech platform is a crucial part
 of the project. The API endpoints and their functionalities are designed to ensure seamless
 communication between the front-end and back-end of the application. By following
 RESTful principles, the API will be scalable, maintainable, and reliable. The sample API
 requests and responses provided above illustrate how each endpoint will function and
 what kind of data it will accept or return. With this API design, StudyNotion will be able to
 provide a smooth user experience while ensuring security and stability.
-# Study_Notion-An_Edtech_Platform
-# Study_Notion-An_Edtech_Platform
+
+# EduLinker-An_Edtech_Platform
