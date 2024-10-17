@@ -2,6 +2,7 @@ const User = require("../models/User");
 const mailSender = require("../utils/mailSender");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
+const {forgotPassword} = require("../mail/templates/forgotPassword")
 
 //resetpassword token
 exports.resetPasswordToken = async (req, res) => {
@@ -29,11 +30,35 @@ exports.resetPasswordToken = async (req, res) => {
 
         console.log("DETAILS", updatedDetails);
 
+        const baseUrl = "https://edu-linker-an-edtech-platform-ten.vercel.app";
+
+        //const baseUrl = "http://localhost:3000";
+
         //create url
-        const url = `http;//localhost:3000/update-password/${token}`;
+        const url = `${baseUrl}/update-password/${token}`;
 
         //send email containing the url
-        await mailSender(email, "Password Reset", `Password Reset Link: ${url}`);
+        //await mailSender(email, "Password Reset", `Password Reset Link: ${url}`);
+
+        try {
+            const emailResponse = await mailSender(
+              email,
+              "Password Reset Link",
+              forgotPassword(
+                email,
+                `${url}`
+              )
+            )
+            console.log("Email sent successfully:", emailResponse.response)
+          } catch (error) {
+            // If there's an error sending the email, log the error and return a 500 (Internal Server Error) error
+            console.error("Error occurred while sending email:", error)
+            return res.status(500).json({
+              success: false,
+              message: "Error occurred while sending email",
+              error: error.message,
+            })
+        }
 
         //return response
         return res.status(200).json({

@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
 import { AiOutlineCaretDown } from "react-icons/ai"
 import { VscDashboard, VscSignOut } from "react-icons/vsc"
-import { logout } from '../../../services/operations/authAPI'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
 import useOnClickOutside from '../../../hooks/useOnClickOutside'
+import { logout } from '../../../services/operations/authAPI'
 
 const ProfileDropDown = () => {
 
@@ -44,7 +44,7 @@ const ProfileDropDown = () => {
             <Link to="/dashboard/my-profile"
             onClick={() => setOpen(false)}
             >
-              <div className='flex w-full items-center gap-x-1 py-[10px] px-[12px] text-sm text-richblack-100 hover:bg-richblack-700 hover:text-richblack-25'>
+              <div className='flex w-full items-center gap-x-1 py-[10px] px-[12px] text-sm text-richblack-100 hover:bg-richblack-700 hover:text-richblack-25 cursor-pointer'>
                 <VscDashboard className="text-lg" />
                 Dashboard
               </div>
@@ -54,7 +54,7 @@ const ProfileDropDown = () => {
               dispatch(logout(navigate))
               setOpen(false)
             }}
-            className='flex w-full items-center gap-x-1 py-[10px] px-[12px] text-sm text-richblack-100 hover:bg-richblack-700 hover:text-richblack-25'
+            className='flex w-full items-center gap-x-1 py-[10px] px-[12px] text-sm text-richblack-100 hover:bg-richblack-700 hover:text-richblack-25 cursor-pointer'
             >
               <VscSignOut className="text-lg" />
               Logout
