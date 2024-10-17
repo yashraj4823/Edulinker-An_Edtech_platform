@@ -56,7 +56,7 @@ const Navbar = () => {
 
         <div className='flex w-11/12 max-w-maxContent items-center justify-between'>
             <Link to="/">
-                <img src={logo} alt='logo' width={160} height={42} loading='lazy' className='ml-2 w-2/3 md:w-full'/>
+                <img src={logo} alt='logo' width={220} height={12} loading='lazy' className='ml-2 w-2/3'/>
             </Link>
 
             {/* Nav Links */}
