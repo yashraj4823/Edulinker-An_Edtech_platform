@@ -19,8 +19,6 @@ export default function MyProfile() {
             </h1>
             <DashboardDropdown/>
         </div>
-        
-
 
         {/* Section 1 */}
         <div className='flex flex-col items-start md:flex-row md:items-center justify-between gap-y-4 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-8 px-12'>
